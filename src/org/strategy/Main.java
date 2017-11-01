@@ -1,6 +1,6 @@
 package org.strategy;
 
-public class MiniDuckSimulator {
+public class Main {
   public static void main(String[] args) {
     Duck mallard = new MallardDuck();
     mallard.performQuack();
