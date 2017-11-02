@@ -15,17 +15,13 @@ public class SimplePizzaFactory {
     return pizza;
   }
 
-  // second way to implements simple factory
-  public Pizza createCheesePizza() {
-    return new CheesePizza();
-  }
-  public Pizza createPepperoniPizza() {
-    return new PepperoniPizza();
-  }
-  public Pizza createClamPizza() {
-    return new ClamPizza();
-  }
-  public Pizza createVeggiePizza() {
-    return new VeggiePizza();
+  public Pizza orderPizza(String type) {
+    Pizza pizza;
+    pizza = createPizza(type);
+    pizza.prepare();
+    pizza.bake();
+    pizza.cut();
+    pizza.box();
+    return pizza;
   }
 }
